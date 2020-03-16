@@ -1,3 +1,340 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    object-fit: contain;
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/*HERO STYLE*/
+body{
+	margin: 3%;
+	margin-top: 0;
+    font-family: 'Titilium Web', sans-serif;
+    width: 95%;
+}
+.nav{
+	display: flex;
+	justify-content: space-between;
+	margin: 1% 0;
+    width: 100%;
+    font-size: 1.7vw;
+}
+.nav div{
+    width: 45%;
+}
+.links a{
+	padding: 1%;
+	color: grey;
+	text-decoration: none;
+}
+.links a:hover{
+	color: deepskyblue;
+}
+.nav .navlogo {
+	width: 15%;
+	margin: 0 3%;
+}
+header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 4%;
+}
+.buttonhead{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.headimg{
+	width: 40%;
+}
+h1{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 4rem;
+}
+button{
+	border: none;
+	background-color: white;
+    max-width: 100%;
+    width: 45%;
+}
+button a{
+    display: inline-block;
+	color: gray;
+	text-decoration: none;
+	padding: 5% 15%;
+    border: 1px solid grey;
+    width: 100%;
+}
+
+/* ABOUT SECTION STYLE*/
+.abouttop{
+	display: flex;
+	justify-content: space-around;
+	border-top: 1px solid gray;
+	padding: 5%;
+}
+.abouttop div{
+	width: 40%;
+}
+.middle-img{
+	width:100%;
+}
+.aboutbot{
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 1px solid gray;
+	padding: 5%;
+}
+.aboutbot div{
+	width: 30%;
+}
+
+/* Contact style*/
+address h3{
+	margin: 2% 1%;
+}
+address p{
+	margin-bottom: 1%;
+}
+
+/*footer*/
+footer{
+	text-align: center;
+}
+
+/* SERVICE PAGE STYLE*/
+body{
+	margin: 0 5%;
+}
+.servicesheader{
+	display: flex;
+	flex-direction: column;
+}
+.servicesheader div{
+	width: 75%;
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.servicesheader h1{
+	font-size: 3em;
+	display: block;
+	margin-top: 3%;
+}
+/* services about section*/
+.serviceAbout{
+	border-top: 1px solid gray;
+	display: flex;
+	flex-flow: row wrap; 
+	border-bottom: 1px solid gray;
+	justify-content: space-around;
+	}
+
+
+.serviceAbout div {
+width: 45%;
+background-color: lightgray;
+margin: 2%;
+padding: 2%;
+border: 1px solid gray;
+}
+
+
+.learn{
+	background-color: white;
+	border:2px solid gray;
+	padding: 1% 5%;
+}
+.serviceAbout p{
+	padding-bottom: 4%;
+}
+/* Fact style*/
+.serviceFact{
+	display: flex;
+	margin: 5%;
+}
+.serviceFact div{
+	width: 45%;
+}
+.serviceFact p{
+	margin: 4%;
+	margin-left: 0;
+}
+.serviceFact ul{
+	list-style-type: disc;
+	list-style: inside;
+}
+.serviceFact li{
+	padding: 2%;
+}
+
+/* ---------------MEDIA QUERIES----------
+------------------TABLET VIEW------------*/
+
+@media (max-width: 800px){
+    body{
+        margin: 0;
+    }
+    .headimg{
+        display: none;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        font-size: 1.75vw;
+    }
+    .links {
+        margin: 3%;
+        width: 80%;
+        display: flex;
+        align-items: space-around;
+    }
+    .navlogo{
+        margin-bottom: 2%;
+        display: flex;
+        justify-content: center;
+    }
+    address{
+        margin-left: 3%;
+    }
+/*----------------------SERVICE PAGE TABLET VIEW--------*/
+    .footerImg{
+        display:none;
+    }
+    .serviceFact div{
+        width: 95%;
+    }
+
+/*--------------MOBILE VIEW----------*/
+@media (max-width: 500px){
+    body{
+        margin: 0;
+    }
+    .navlogo{
+        max-width: 100%;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+    }
+    .links{
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2vw;
+    }
+    .links a{
+        padding: 5%;
+        width: 100%;
+        text-align: center;
+    }
+    /* -----ABOUT SECTION MOBILE VIEW---------*/
+
+    .abouttop{
+        flex-direction: column;
+        align-items: center;
+    }
+    .abouttop div{
+        width:95%;
+        margin: 3%;
+    }
+    .aboutbot{
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutbot div{
+        width: 95%;
+        margin: 3%;
+    }
+    /*------------FOOTER MOBILE VIEW--------*/
+    address{
+        margin-left: 3%;
+    }
+	.servNavLinks{
+		font-size: 1.75vw;
+    }
+    .serviceAbout {
+		display: flex;
+		flex-direction: column;
+        align-items: center;
+	}
+	.serviceAbout div{
+		width: 95%;
+		}
+}
 
