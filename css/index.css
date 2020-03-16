@@ -78,7 +78,7 @@ body{
 	justify-content: space-between;
 	margin: 1% 0;
     width: 100%;
-    font-size: 1.75vw;
+    font-size: 1.7vw;
 }
 .nav div{
     width: 45%;
@@ -268,6 +268,12 @@ border: 1px solid gray;
         margin-left: 3%;
     }
 /*----------------------SERVICE PAGE TABLET VIEW--------*/
+    .footerImg{
+        display:none;
+    }
+    .serviceFact div{
+        width: 95%;
+    }
 
 /*--------------MOBILE VIEW----------*/
 @media (max-width: 500px){
@@ -291,6 +297,11 @@ border: 1px solid gray;
         flex-direction: column;
         align-items: center;
         font-size: 2vw;
+    }
+    .links a{
+        padding: 5%;
+        width: 100%;
+        text-align: center;
     }
     /* -----ABOUT SECTION MOBILE VIEW---------*/
 
