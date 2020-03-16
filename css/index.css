@@ -53,9 +53,11 @@ table {
 }
 
 html, body {
-    height: 100%;
+    width: 100%;
     font-family: 'Titillium Web', sans-serif;
+    object-fit: contain;
 }
+
 
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
@@ -107,18 +109,21 @@ h1{
 	display:flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 65px;
+	font-size: 4rem;
 }
 button{
 	border: none;
 	background-color: white;
-	max-width: 100%;
+    max-width: 100%;
+    width: 45%;
 }
 button a{
+    display: inline-block;
 	color: gray;
 	text-decoration: none;
-	padding: 5px 30px;
-	border: 2px solid grey;
+	padding: 5% 15%;
+    border: 1px solid grey;
+    width: 100%;
 }
 
 /* ABOUT SECTION STYLE*/
@@ -176,7 +181,7 @@ body{
 	text-decoration: none;
 	color: gray;
 	padding: 1%;
-	font-size: 10px;
+	font-size: 1em;
 }
 
 .servicesheader{
@@ -209,22 +214,13 @@ width: 45%;
 background-color: lightgray;
 margin: 2%;
 padding: 2%;
-border: 2px solid gray;
+border: 1% solid gray;
 }
-@media (max-width: 600px){
-	.serviceAbout {
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: center;
-	}
-	.serviceAbout div{
-		width: 95%;
-		}
-}
+
 
 .learn{
 	background-color: white;
-	border:2px solid gray;
+	border:1% solid gray;
 	padding: 1% 5%;
 }
 .serviceAbout p{
@@ -249,14 +245,93 @@ border: 2px solid gray;
 .serviceFact li{
 	padding: 2%;
 }
+
+/* ---------------MEDIA QUERIES----------
+------------------TABLET VIEW------------*/
+
+@media (max-width: 800px){
+    body{
+        margin: 0;
+    }
+    .headimg{
+        display: none;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        font-size: 1.75vw;
+    }
+    nav div {
+        margin: 3%;
+        size: 80%;
+    }
+    .logo{
+        margin-bottom: 2%;
+    }
+    address{
+        margin-left: 3%;
+    }
+}
+/*--------------MOBILE VIEW----------*/
 @media (max-width: 500px){
+    body{
+        margin: 0;
+    }
+    .logo{
+        max-width: 100%;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+    }
+    .links{
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        width: 100%;
+    }
+    .links a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2vw;
+        width: 100%;
+    }
+    /* -----ABOUT SECTION MOBILE VIEW---------*/
+
+    .abouttop{
+        flex-direction: column;
+        align-items: center;
+    }
+    .abouttop div{
+        width:95%;
+        margin: 3%;
+    }
+    .aboutbot{
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutbot div{
+        width: 95%;
+        margin: 3%;
+    }
+    /*------------FOOTER MOBILE VIEW--------*/
+    address{
+        margin-left: 3%;
+    }
 	.servNavLinks{
 		font-size: 1.75vw;
     }
     .serviceAbout {
 		display: flex;
-		flex-flow: column nowrap;
-		align-content: center;
+		flex-direction: column;
+        align-items: center;
 	}
 	.serviceAbout div{
 		width: 95%;
